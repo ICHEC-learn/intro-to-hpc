@@ -1,22 +1,16 @@
 ---
-title: "Episode title"
+title: "Why should I use a HPC cluster?"
 teaching: 10
 exercises: 0
 questions:
-- "How are these files formatted"
+- "Why would HPC be important to my work?"
+- "What will I learn from this course?"
 objectives:
-- "Outline information sources"
-- "How to import images, code snippets and abstractions"
-- "How to structure callouts, highlighting"
+- "Understand how a HPC system can benefit you"
 keypoints:
-- "Lesson episodes are stored in _episodes/dd-subject.md."
-- "Each episode's title must include a title, time estimates, motivating questions, lesson 
-  objectives, and key points."
-- "Episodes should not use sub-titles or HTML layout."
-- "Code blocks can have the source, regular output, or error class."
-- "Special sections are formatted as blockquotes that open with a level-2 header and close with a
-  class identifier."
-- "Special sections may be callouts or challenges; other styles are used by the template itself."
+- "High Performance Computing (HPC) involves connecting to large computing systems elsewhere in the world"
+- "HPCs typically have thousands to hundreds of thousands of cores"
+- "HPCs have the ability to perform calculations and run simulations that would be impossible on normal machines"
 ---
 
 <p align="center"><img src="../fig/ICHEC_Logo.jpg" width="40%"/></p>
