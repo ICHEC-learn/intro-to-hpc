@@ -12,7 +12,7 @@ objectives:
 keypoints:
 - "You will typically have 2 main directories, `home` and `work`. Your `work` directory will have much more space than `home`"
 - "Absolute path is the location in a file system relative to the root `/` directory"
-- "Relative path is the loaction in a file system relative to the directory you are currently in"
+- "Relative path is the location in a file system relative to the directory you are currently in"
 - "`vim` is one of the most popular and flexible text editors"
 ---
 
