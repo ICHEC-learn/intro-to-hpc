@@ -54,7 +54,7 @@ Most of the syntax is covered below, aside from a few other requirements which a
 
 - **Jumping between episodes**: The next episode can be referred to with the arrow, but the most
                                 common is 
-                                [next lesson]({{page.root}}{% link _episodes/02-deep-thought.md %})
+                                [next lesson]({{page.root}}{% link _episodes/02-connecting-to-a-remote-system.md %})
 
 - **Data files**: If you are working on a course that requires the users to have some data, you can use links to the
                   [file]({{page.root}}{% link files/mydata.txt %}) in this example.
