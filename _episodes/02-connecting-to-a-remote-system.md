@@ -1,7 +1,7 @@
 ---
 title: "Connecting to a remote system"
 teaching: 10
-exercises: 0
+exercises: 10
 questions:
 - "What is an SSH key, and how do I set it up?"
 - "How can I connect to a remote cluster?"
