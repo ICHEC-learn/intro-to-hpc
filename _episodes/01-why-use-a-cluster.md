@@ -13,7 +13,7 @@ keypoints:
   - "HPCs have the ability to perform calculations and run simulations that would be impossible on normal machines"
 ---
 
-<p align="center"><img src="../fig/ICHEC_Logo.jpg" width="40%"/></p>
+<p align="center"><img src="../fig/ICHEC_Logo.jpg" width="10%"/></p>
 
 ## Overview
 
