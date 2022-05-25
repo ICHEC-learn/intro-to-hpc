@@ -25,8 +25,6 @@ keypoints:
 
 - There are different types of nodes; login nodes, general compute nodes, high memory nodes, and gpu nodes.
 
-<p align="center"><img src="../fig/nodes.jpg" width="40%"/></p>
-
 ## Road map for today
 
 - **Connection**
