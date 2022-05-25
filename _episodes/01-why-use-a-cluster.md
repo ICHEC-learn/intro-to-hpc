@@ -17,17 +17,17 @@ keypoints:
 
 ## Overview
 
-A HPC cluster is a collection of 'computers' called nodes, all inter connected. Considerably more powerful then just one computer, like your laptop.
+- A HPC cluster is a collection of 'computers' called nodes, all inter connected. Considerably more powerful then just one computer, like your laptop.
 
-Just for scale - your laptop typically has 8 cores. Kay has 40 cores PER node and has 336 'normal' compute nodes.
+- Just for scale - your laptop typically has 8 cores. Kay has 40 cores PER node and has 336 'normal' compute nodes.
 
-Once connected you can avail of the computation power and run scirpts too heavy to run on your own computer.
+- Once connected you can avail of the computation power and run scirpts too heavy to run on your own computer.
 
-There are different types of nodes; login nodes, general compute nodes, high memory nodes, and gpu nodes.
+- There are different types of nodes; login nodes, general compute nodes, high memory nodes, and gpu nodes.
 
-<p align="center"><img src="../fig/nodes.jpg" width="40%"/></p>
+<p align="center"><img src="../fig/nodes.jpg" width="10%"/></p>
 
-> ## Road map for today
+## Road map for today
 
 - **Connection**
 
@@ -38,7 +38,5 @@ There are different types of nodes; login nodes, general compute nodes, high mem
 - **Modules**
 
 - **Submission**
-
-> {: .solution }
 
 {% include links.md %}
