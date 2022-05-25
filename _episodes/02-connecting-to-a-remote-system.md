@@ -14,15 +14,29 @@ keypoints:
 ---
 
 <p align="center"><img src="../fig/ICHEC_Logo.jpg" width="40%"/></p>
+## Setting up a key pair
+When you set up an SSH key, you generate a "key-pair", a public and private key.
+
+See here for a recap
+
+https://www.ichec.ie/academic/national-hpc/documentation/tutorials/setting-ssh-keys
 
 > ## `.challenge`
 >
-> An exercise.
+> Login to your course account on Kay. You will have been given a courseXX and a password.
 > {: .challenge}
 
 > ## `.solution`
 >
-> Exercise solution.
 > {: .solution}
+> `.language-bash`: Bash shell commands:
+
+```
+ssh courseXX@kay.ichec.ie -i ~/.ssh/id_ed25519
+```
+
+{: .language-bash}
+
+`.language-html`: HTML source:
 
 {% include links.md %}
