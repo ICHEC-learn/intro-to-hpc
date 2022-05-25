@@ -3,61 +3,62 @@ title: "Why should I use a HPC cluster?"
 teaching: 10
 exercises: 0
 questions:
-- "Why would HPC be important to my work?"
-- "What will I learn from this course?"
+  - "Why would HPC be important to my work?"
+  - "What will I learn from this course?"
 objectives:
-- "Understand how a HPC system can benefit you"
+  - "Understand how a HPC system can benefit you"
 keypoints:
-- "High Performance Computing (HPC) involves connecting to large computing systems elsewhere in the world"
-- "HPCs typically have thousands to hundreds of thousands of cores"
-- "HPCs have the ability to perform calculations and run simulations that would be impossible on normal machines"
+  - "High Performance Computing (HPC) involves connecting to large computing systems elsewhere in the world"
+  - "HPCs typically have thousands to hundreds of thousands of cores"
+  - "HPCs have the ability to perform calculations and run simulations that would be impossible on normal machines"
 ---
 
 <p align="center"><img src="../fig/ICHEC_Logo.jpg" width="40%"/></p>
 
 ## Overview
 
-Carpentries lessons are written in standard markdown format with a few modifications, which will be
-discussed in this episode.
+A HPC cluster is a collection of 'computers' called nodes, all inter connected. Considerably more powerful then just one computer, like your laptop.
 
-For a full guide on Carpentries rationale, refer to the 
-[documentation](https://carpentries.github.io/curriculum-development/designing-challenges.html)
+Just for scale - your laptop typically has 8 cores. Kay has 40 cores PER node and has 336 'normal' compute nodes.
 
-A well written, clean Carpentries style code should not exceed 120 characters per line, otherwise
-it could cause build issues with the tests. Refer to the lesson check python file 
-[here](https://github.com/ICHEC-learn/ichec-template/blob/gh-pages/bin/lesson_check.py)
+Once connected you can avail of the computation power and run scirpts too heavy to run on your own computer.
 
-These `.md` should be viewed as supporting material to the slides that you are presenting, based
-off the material in here. 
+There are different types of nodes; login nodes, general compute nodes, high memory nodes, and gpu nodes.
 
-Most of the syntax is covered below, aside from a few other requirements which are non-standard.
+<p align="center"><img src="../fig/nodes.jpg" width="40%"/></p>
+
+> ## Road map for today
+
+> **Connection** > **Acounnts** > **Transfer** > **Modules** > **Submission**
 
 - **Pictures**: See the implementation of the logo above for adding images and also their location.
 - **Code snippets**: Instead of writing out a whole code and clogging up the contents of a markdown
-                     file, snippets can be separate files stored in `_includes/snippets_library`
+  file, snippets can be separate files stored in `_includes/snippets_library`
 
-~~~
+```
 {% include {{ site.snippets }}/ep01/bash_commands.snip %}
-~~~
+```
+
 {: .source}
 
 - **Abstractions**: Carpentries comes with a handy way of abstracting commonly repeated references.
-                    These are stored in the 
-                    [`_config.yml`](https://github.com/ICHEC-learn/ichec-template/blob/gh-pages/_config.yml)
+  These are stored in the
+  [`_config.yml`](https://github.com/ICHEC-learn/ichec-template/blob/gh-pages/_config.yml)
 
-~~~
+```
 {{ site.remote.name }} is hosted by the {{ site.remote.location }}
 
 {{ site.sched.submit }} myjob.sh
-~~~
+```
+
 {: .source}
 
 - **Jumping between episodes**: The next episode can be referred to with the arrow, but the most
-                                common is 
-                                [next lesson]({{page.root}}{% link _episodes/02-connecting-to-a-remote-system.md %})
+  common is
+  [next lesson]({{page.root}}{% link _episodes/02-connecting-to-a-remote-system.md %})
 
 - **Data files**: If you are working on a course that requires the users to have some data, you can use links to the
-                  [file]({{page.root}}{% link files/mydata.txt %}) in this example.
+  [file]({{page.root}}{% link files/mydata.txt %}) in this example.
 
 ### Syntax Highlighting
 
@@ -68,92 +69,98 @@ and to make code easier to read.
 
 `.language-bash`: Bash shell commands:
 
-~~~
+```
 echo "Hello World"
-~~~
+```
+
 {: .language-bash}
 
 `.language-html`: HTML source:
 
-~~~
+```
 <html>
 <body>
 <em>Hello World</em>
 </body>
 </html>
-~~~
+```
+
 {: .language-html}
 
 `.language-make`: Makefiles:
 
-~~~
+```
 all:
     g++ main.cpp hello.cpp -o hello
-~~~
+```
+
 {: .language-make}
 
 `.language-matlab`: MATLAB source:
 
-~~~
+```
 disp('Hello, world!')
-~~~
+```
+
 {: .language-matlab}
 
 `.language-python`: Python source:
 
-~~~
+```
 print("Hello World")
-~~~
+```
+
 {: .language-python}
 
 `.language-r`: R source:
 
-~~~
+```
 cat("Hello World")
-~~~
+```
+
 {: .language-r}
 
 `.language-sql`: SQL source:
 
-~~~
+```
 CREATE PROCEDURE HelloWorld AS
 PRINT 'Hello, world!'
 RETURN (0)
-~~~
+```
+
 {: .language-sql}
 
 > ## Highlighting for other languages
+>
 > You may use other `language-*` classes to activate syntax highlighting
 > for other languages.
 > For example,
 >
 > {% raw %}
->     ~~~
->     title: "YAML Highlighting Example"
->     description: "This is an example of syntax highlighting for YAML."
->     array_values:
->         - value_1
->         - value_2
->     ~~~
->     {: .language-yaml }
-> {% endraw %}
 >
+> ```
+> title: "YAML Highlighting Example"
+> description: "This is an example of syntax highlighting for YAML."
+> array_values: - value_1 - value_2
+> ```
+>
+> {: .language-yaml }
+> {% endraw %}
 >
 > will produce this:
 >
-> ~~~
+> ```
 > title: "YAML Highlighting Example"
 > description: "This is an example of syntax highlighting for YAML."
 > array_values:
 >     - value_1
 >     - value_2
-> ~~~
+> ```
+>
 > {: .language-yaml }
 >
->
 > Note that using `.language-*` classes other than
-> `.language-bash`
-> `.language-html`,
+> `.language-bash` > `.language-html`,
 > `.language-make`,
 > `.language-matlab`,
 > `.language-python`,
@@ -163,8 +170,7 @@ RETURN (0)
 > `make lesson-check` to fail for your lesson,
 > but will not prevent lesson pages from building and rendering correctly.
 >
-{: .solution }
-
+> {: .solution }
 
 ## Special Blockquotes
 
@@ -177,7 +183,7 @@ but may contain anything after that.
 For example,
 a callout is formatted like this:
 
-~~~
+```
 > ## Callout Title
 >
 > text
@@ -189,7 +195,8 @@ a callout is formatted like this:
 > ~~~
 > {: .source}
 {: .callout}
-~~~
+```
+
 {: .source}
 
 (Note the empty lines within the blockquote after the title and before the code block.)
@@ -201,11 +208,12 @@ This is rendered as:
 > text
 > text
 >
-> ~~~
+> ```
 > code
-> ~~~
+> ```
+>
 > {: .source}
-{: .callout}
+> {: .callout}
 
 The [lesson template]({{ site.template_repo }}) defines styles
 for the following special blockquotes:
@@ -216,27 +224,27 @@ for the following special blockquotes:
 > ## `.callout`
 >
 > An aside or other comment.
-{: .callout}
+> {: .callout}
 
 > ## `.challenge`
 >
 > An exercise.
-{: .challenge}
+> {: .challenge}
 
 > ## `.checklist`
 >
 > Checklists.
-{: .checklist}
+> {: .checklist}
 
 > ## `.discussion`
 >
 > Discussion questions.
-{: .discussion}
+> {: .discussion}
 
 > ## `.keypoints`
 >
 > Key points of an episode.
-{: .keypoints}
+> {: .keypoints}
 
   </div>
   <div class="col-md-6" markdown="1">
@@ -244,22 +252,22 @@ for the following special blockquotes:
 > ## `.objectives`
 >
 > Episode objectives.
-{: .objectives}
+> {: .objectives}
 
 > ## `.prereq`
 >
 > Prerequisites.
-{: .prereq}
+> {: .prereq}
 
 > ## `.solution`
 >
 > Exercise solution.
-{: .solution}
+> {: .solution}
 
 > ## `.testimonial`
 >
 > A laudatory quote from a user.
-{: .testimonial}
+> {: .testimonial}
 
   </div>
 </div>
@@ -280,7 +288,7 @@ but are instead put on the `setup.md` page.
 
 Note also that solutions are nested inside exercises as shown below:
 
-~~~
+```
 > ## Challenge Title
 >
 > This is the body of the challenge.
@@ -300,7 +308,8 @@ Note also that solutions are nested inside exercises as shown below:
 > > {: .output}
 > {: .solution}
 {: .challenge}
-~~~
+```
+
 {: .source}
 
 The double indentation is annoying to edit,
