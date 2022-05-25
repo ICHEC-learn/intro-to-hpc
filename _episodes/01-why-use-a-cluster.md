@@ -29,15 +29,15 @@ There are different types of nodes; login nodes, general compute nodes, high mem
 
 > ## Road map for today
 
-> **Connection**
+- **Connection**
 
-> **Acounnts**
+- **Acounnts**
 
-> **Transfer**
+- **Transfer**
 
-> **Modules**
+- **Modules**
 
-> **Submission**
+- **Submission**
 
 > {: .solution }
 
