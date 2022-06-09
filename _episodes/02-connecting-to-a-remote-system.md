@@ -67,7 +67,7 @@ machines perform a virtual handshake.
 > You will have been sent a link to submit your ssh keys in the last few days, if you have not submitted your ssh key
 > you must do so now.
 >
-> If you ahve sent your public key in, your ssh key will have been added to your course account. You should **ONLY USE**
+> If you have sent your public key in, your ssh key will have been added to your course account. You should **ONLY USE**
 > **YOUR COURSE ACCOUNT FOR THE DURATION OF THIS COURSE, REGARDLESS IF YOU ALREADY HAVE AN ACCOUNT WITH US**.
 >
 > Try and log in using the following command. Replace the XX with the course account nthat you have been given
@@ -246,7 +246,7 @@ The programs `vim` and `nano` are text editors that can be used on most HPC clus
 $ vim myfile.txt 
 $ nano myfile.txt 
 ~~~
-{: .usage}
+{: .language-bash}
 
 
 

@@ -22,7 +22,7 @@ A HPC cluster is a collection of 'computers' called nodes, all inter connected. 
 one computer, like your laptop. As an idea of scaleJust for scale - your laptop typically has 8 cores. Kay has 40 cores
 **per node** and has 336 **normal** compute nodes.
 
-Once connected you can avail of the computation power and run scirpts too heavy to run on your own computer. There are 
+Once connected you can avail of the computation power and run scripts too heavy to run on your own computer. There are 
 different types of nodes; 
 
 - Login nodes
@@ -92,7 +92,7 @@ you have some pencils and notepads where you write in the catalog number of the 
 then deliver your list of orders to the till and then an attendant gets the items for you behind the scenes while you
 wait.
 
-These can be thought of as the action of submission sripts and compute nodes. The **compute nodes** are like the
+These can be thought of as the action of submission scripts and compute nodes. The **compute nodes** are like the
 warehouse of the store, all the important things are stored there and is where all the major work is done. On a HPC, the
 compute nodes are the place that your code is run.
 
