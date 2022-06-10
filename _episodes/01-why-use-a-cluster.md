@@ -109,6 +109,71 @@ snippets of code, no longer than a few minutes. Just enough to check that your c
 
 ## ICHEC's national service
 
+ICHEC's National Service provides three different project classes with differing resource allocations, review levels
+and review turnaround times. The selection of each class largely depends on the necessities and requirements of the 
+research and applicant's objectives.
+
+You can use our [core calculator)](https://www.ichec.ie/academic/national-hpc/national-service-projects) to calculate
+the number of core hours depending on the node type. If you are considering undertaking a project with ICHEC, this can
+be a useful resource.
+
+### Class C Project: Discovery
+
+Class C projects are intended to provide fast access to modest resources with less review overhead. They have multiple
+possible uses including:
+
+- Introductory access for inexperienced HPC users
+- Exploratory access for researchers who need to develop, port, optimise or benchmark codes
+- Easier access for users planning small scale runs with very modest requirements
+
+Class C project applicants should note that the maximum resource levels are modest and will be exhausted very quickly
+if larger scale runs are performed.
+
+|      Item     |                        Amount                             |
+|---------------|-----------------------------------------------------------|
+| Max. CPU      | 100,000 h                                                 |
+| Max. Storage  | 250 GB                                                    |
+| Max. Duration | 12 months                                                 |
+| Max. Review   | 1 week                                                    |
+| Proposal      | 2-3 pages.                                                |
+| Applicants    | Group Leader/Professor/Lecturer/Post-doc/Graduate Student |
+
+
+### Class B project: Regular
+
+Class B projects are intended for the needs of the majority of the research community. Typically applicants will be
+small research groups or individual researchers. Successful applications are expected to lead to referred publications.
+
+|      Item     |                 Amount                    |
+|---------------|-------------------------------------------|
+| Max. CPU      | 1,000,000 h                               |
+| Max. Storage  | 2000 GB                                   |
+| Max. Duration | 18 months                                 |
+| Max. Review   | 8 weeks                                   |
+| Proposal      | 4-5 pages.                                |
+| Applicants    | Group Leader/Professor/Lecturer/Post-doc  |
+
+### Class A project: High Impact
+
+Class A projects are intended for consortia concerned with high impact problems. These groups will require resources
+representing a substantial fraction of the centre's resources over a long period of time. Successful applications are 
+expected to yield high-impact scientific publications.
+
+Class A project project applicants are expected to have a good knowledge of the characteristics of the code(s) which 
+they intend to use - such as scalability properties - before writing their proposal. For this reason, applicants who 
+are not in such a position are advised to first apply for an exploratory Class C project in order to undertake a basic 
+scalability and performance study. Such an exercise is essential to provide an accurate estimate and a proper 
+justification of the resources requested. 
+
+|      Item     |                Amount               |
+|---------------|-------------------------------------|
+| Max. CPU      | 10,000,000 h                        |
+| Max. Storage  | 5000 GB                             |
+| Max. Duration | 24 months                           |
+| Max. Review   | 12 weeks                            |
+| Proposal      | 6-10 pages.                         |
+| Applicants    | Group Leader/Professor/Lecturer/    |
+
 
 
 {% include links.md %}
