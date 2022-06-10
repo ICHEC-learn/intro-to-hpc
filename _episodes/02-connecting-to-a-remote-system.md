@@ -116,21 +116,18 @@ machines perform a virtual handshake.
 > ##############################################################################
 > ~~~
 > {: .output}
->
+> 
+> If you finish this exercise quickly, feel free to have a look at the Linux commands below and get some practice
+> while you wait.
 >
 {: .challenge}
 
-## Home and work directories
-
-`quota`
-
-`mybalance`
 
 ## A review of the Linux commands
 
 If you are new to Linux, then we highly recommend that you go through the materials covered in our 
 [Introduction to Linux](https://ichec-learn.github.io/intro-to-linux/) course before continuing. A brief summary of the
-most commonly used commands are given below. To move to the next episode
+most commonly used commands are given below.
 
 #### `pwd` - print working directory
 
@@ -188,6 +185,17 @@ $ rmdir new_directory
 
 #### `mv` and `cp`
 
+Move `mv` and copy `cp` work in very similar ways, where two inputs are needed, first the file that you are 
+copying/moving and second the location you are moving/copying to. The `mv` command has a secondary use to 
+rename a file.
+
+~~~
+$ mv file1 renamed_file1
+$ mv file1 mydir
+$ cp file1 mydir
+~~~
+{: .language-bash}
+
 #### `rm` 
 
 The remove command `rm` is a particularly dangerous command, as the shell deletes files instantly, bypassing the regular
@@ -240,7 +248,9 @@ grep 'expression' file.txt
 
 #### `vim` and `nano`
 
-The programs `vim` and `nano` are text editors that can be used on most HPC clusters.
+The programs `vim` and `nano` are text editors that can be used on most HPC clusters. We will work with these more in
+upcoming episodes. We would recommend using `vim` as it has plentiful useful shortcuts and is very versatile. It can be
+tricky to learn, so feel free to use `nano` for an easy use file editor.
 
 ~~~
 $ vim myfile.txt 
