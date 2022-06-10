@@ -258,8 +258,6 @@ $ nano myfile.txt
 ~~~
 {: .language-bash}
 
-
-
-
+This will be covered in more detail in the [next episode](03-moving-and-editing.md).
 
 {% include links.md %}
