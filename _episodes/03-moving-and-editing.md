@@ -234,7 +234,7 @@ it operates in a very similar way to the `cp` command.
 On your local machine, the syntax is as follows;
 
 ~~~
-scp johnsmith@satellite.world:~/files/myfile.txt /path/to/directory
+$ scp johnsmith@satellite.world:~/files/myfile.txt /path/to/directory
 ~~~
 {: .language-bash}
 
@@ -243,7 +243,7 @@ more manageable, is to navigate to the directory that you want to put the files 
 current directory notation (`.`) in the following manner.
 
 ~~~
-scp johnsmith@satellite.world:~/files/myfile.txt .
+$ scp johnsmith@satellite.world:~/files/myfile.txt .
 ~~~
 {: .language-bash}
 
@@ -254,7 +254,7 @@ Often, we don't just transfer one file at a time, we may want to transfer entire
 recursive flag (`-r`) as shown below.
 
 ~~~
-scp -r johnsmith@satellite.world:~/files .
+$ scp -r johnsmith@satellite.world:~/files .
 ~~~
 {: .language-bash}
 
@@ -263,7 +263,7 @@ different, as the file to be transferred needs to go first, followed by the dire
 It is once again recommended to navigate to the local file and confirm the directory on the remote host.
 
 ~~~
-scp localfile.txt johnsmith@satellite.world:~/files/
+$ scp localfile.txt johnsmith@satellite.world:~/files/
 ~~~
 {: .language-bash}
 
