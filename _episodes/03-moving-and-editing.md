@@ -250,7 +250,7 @@ scp johnsmith@satellite.world:~/files/myfile.txt .
 This places the file into your current directory, and can be a handy way to make the command less complicated for
 starters!
 
-Often, we don't jsut transfer one file at a time, we may want to transfer entire directories, which we do by using the
+Often, we don't just transfer one file at a time, we may want to transfer entire directories, which we do by using the
 recursive flag (`-r`) as shown below.
 
 ~~~
