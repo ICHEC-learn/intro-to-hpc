@@ -279,18 +279,23 @@ scp localfile.txt johnsmith@satellite.world:~/files/
 > 
 {: .challenge}
 
-> ## Common problems
->
-> ### Running the command on remote host
->
-> As mentioned above
-> ### Unable to open two terminal windows e.g cygwin
->
-> You will ideally need two terminal windows open to get this working optimally, although it can be done with just one.
->
-> For users of Cygwin, using two terminal windows simultaneously can be tricky. We recommend therefore taking a note of
-> the directory where your file is stored on the supercomputer before attempting.
-> 
-{: .callout}
+Common problems that can be encountered with this include running the command on the remote host rather than the local
+machine. So be careful to keep that in mind. Some terminal emulators, such as Cygwin do not have the option to use two 
+terminal windows simultaneously can be tricky. We recommend therefore taking a note of the directory where your file is
+stored on the supercomputer before attempting.
+
+### SCP/SFTP clients
+
+There are plenty of software packages out there that can utilise SCP, and not all of them need to be based in the
+terminal. The main clients (some of which have terminal emulators) include, but are not limited to;
+
+- MobaXterm
+- Git Bash
+- Filezilla
+- Bitvise
+- WinSCP
+- Cyberduck
+
+That being said however, the terminal option is preferable in place of having another software package on your machine.
 
 {% include links.md %}
