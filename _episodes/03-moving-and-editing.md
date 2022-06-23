@@ -9,6 +9,7 @@ questions:
 objectives:
 - "Learn how to navigate around a remote system"
 - "Utilise navigational Linux commands"
+- "Understand and manipulate UNIX permissions"
 - "Utilise the `vim` text editor tool"
 keypoints:
 - "You will have 2 main directories associated with your account. Your `work` directory will have much more space than `home`"
@@ -19,6 +20,25 @@ keypoints:
 
 <p align="center"><img src="../fig/ICHEC_Logo.jpg" width="40%"/></p>
 
+## Using text editors
+
+In the [previous episode](02-connecting-to-a-remote-system.md), we saw a reference to text editors, namely `vim` and 
+`nano`
+
+> ## Getting used to text editors
+>
+> Spend 10 minutes getting used to working with `vim` or `nano`
+>
+> | Command |                               Action                                   |
+> |---------|------------------------------------------------------------------------|
+> | `i`     | Enter into INSERT mode, which will allow you to write text             |
+> | `Esc`   | Enters into COMMAND mode, where commands like the below can be written |
+> | `:wq`   | Writes, saves and exits the file                                       |
+> | `:q!`   | Force quits without saving                                             |
+> 
+> `nano` has all the commands in the editor window.
+>
+{: .challenge}
 
 ## File permissions
 
@@ -167,7 +187,95 @@ $ chmod 750 my_script.sh
 
 ## File transfer with `scp`
 
-> ## 
+So, you've created a file or group of files on your account, now how can you copy them onto your local machine?
+
+To do this we need to remind ourselves of the difference between your local machine and the remote host. This is
+always outlined in the prompt, so recognising the information in the prompt is very important. Let us take a
+simplified example of the Earth and a satellite. The Earth, or specifically a specific "address" on the Earth is
+the local machine, let us say it has the address `0123-laptop`. The satellite is the remote host, the machine
+that you are connecting to, let us say it has the address `satellite.world`. For each of these machines, you have a 
+username, and they may be different depending on the machine, but for simplicity here we will use the same username,
+`johnsmith`. The prompts for the local and remote machines would therefore be as follows;
+
+- Local: `johnsmith@0123-laptop`
+- Remote: `johnsmith@satellite.world`
+
+Let's have a quick think first.
+
+> ## Transferring files... "where" is important!
+> 
+> Say that you are have some files on the satellite and you want to take them off the satellite and onto your local
+> machine. Where would you need to run the command to transfer files from?
+>
+> > ## Solution
+> > 
+> > Your local machine.
+> > 
+> > Whether you were right or wrong, take a moment to think about why.
+> >
+> {: .solution}
+{: .challenge} 
+
+You may have been a bit stumped by that, because surely as we are working on a remote host, be it a supercomputer or 
+satellite, that should be where the command is run from, but it is not. Let's take the situational approach, and 
+imagine you are working on the satellite in the directory `johnsmith@satellite.world:~/files/`, with a files present
+there called `mydata.dat`. You now want to transfer it to a directory your local machine, the address and directory
+that you want to send it to being `johnsmith@0123-laptop:~/localdata/`. There is a big problem here, as the satellite 
+has no idea where `0123-laptop` is! 
+
+Laptop/local addresses are typically very vague without much context, but that is not the reason. You can connect from
+a local host to a remote host but not the other way around. Therefore the local host has to fetch material from the
+remote host.
+
+Therefore, we need to take note of the path to our file on the remote host, `~/files/myfile.txt`. From there, we need
+to open a terminal on our local machine and utilise a new command, `scp`, which stands for *secure copy*. From there, 
+it operates in a very similar way to the `cp` command.
+
+On your local machine, the syntax is as follows;
+
+~~~
+scp johnsmith@satellite.world:~/files/myfile.txt /path/to/directory
+~~~
+{: .language-bash}
+
+You may well need to enter the passwords that you needed to access the remote machine. A useful tip to make the command
+more manageable, is to navigate to the directory that you want to put the files on your local machine, and use the
+current directory notation (`.`) in the following manner.
+
+~~~
+scp johnsmith@satellite.world:~/files/myfile.txt .
+~~~
+{: .language-bash}
+
+This places the file into your current directory, and can be a handy way to make the command less complicated for
+starters!
+
+Often, we don't jsut transfer one file at a time, we may want to transfer entire directories, which we do by using the
+recursive flag (`-r`) as shown below.
+
+~~~
+scp -r johnsmith@satellite.world:~/files .
+~~~
+{: .language-bash}
+
+If you want to get something from your local machine onto a remote host, then the command will naturally be a bit
+different, as the file to be transferred needs to go first, followed by the directory to put it into on the remote host.
+It is once again recommended to navigate to the local file and confirm the directory on the remote host.
+
+~~~
+scp localfile.txt johnsmith@satellite.world:~/files/
+~~~
+{: .language-bash}
+
+> ## `scp` files onto your local machine
+> 
+> Use `scp` to undertake the following steps
+>
+> 1. Create a directory on the remote host and create some empty files. 
+> 2. Use `scp` to transfer a single one of those files to a directory on your local machine.
+> 3. Repeat but use the recursive option to copy the entire folder to your local machine.
+> 4. On your local machine, edit the file you have copied, and add another file into the directory you have transferred.
+> 5. `scp` your edited files and directory back onto the remote host.
 > 
 {: .challenge}
 
@@ -175,16 +283,13 @@ $ chmod 750 my_script.sh
 >
 > ### Running the command on remote host
 >
-> As mentioned
+> As mentioned above
 > ### Unable to open two terminal windows e.g cygwin
 >
 > You will ideally need two terminal windows open to get this working optimally, although it can be done with just one.
 >
 > For users of Cygwin, using two terminal windows simultaneously can be tricky. We recommend therefore taking a note of
 > the directory where your file is stored on the supercomputer before attempting.
-> 
-> You 
-> 
 > 
 {: .callout}
 
