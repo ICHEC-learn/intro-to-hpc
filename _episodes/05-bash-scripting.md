@@ -18,7 +18,11 @@ keypoints:
 ## What is bash scripting?
 
 If you have taken our [intro-to-linux](https://ichec-learn.github.io/intro-to-linux/) course, you should already be
-familiar with the concept of bash scripting.
+familiar with the concept of bash scripting. If so then you can skip to the [next episode](06-job-submissions.md).
+
+Bash scripting is by far the most important concept in HPC computing, without it, you cannot submit submission scripts
+to the login nodes to run. We will look over some concepts and key skills associated with a simple bash script before
+we move onto actual job submissions in the next episode.
 
 ## Text editors
 
