@@ -37,7 +37,14 @@ https://www.ichec.ie/academic/national-hpc/documentation/tutorials/setting-ssh-k
 
 > ## For Windows MobaXterm users
 >
-> MobaXterm will not 
+> MobaXterm will not automatically generate a public key in the correct directory, you will need to do 2 steps to get
+> your public key working effectively.
+>
+> 1. In Settings Tab --> Terminal Tab --> Terminal features Box, ensure that the “Paste using right-click” box is left 
+>    un-ticked.
+> 2. In Settings Tab --> General Tab --> Persistent home directory Box Enter `_ProfileDir_`  into the box, otherwise 
+>    your public ssh key will be denied by ICHEC systems.
+>
 {: .callout}
 
 The public key, in cryptographic terms is a large numerical value that is used to encrypt data. Most people don’t need 
@@ -122,6 +129,19 @@ machines perform a virtual handshake.
 >
 {: .challenge}
 
+> ## Clone the lesson repository
+>
+> In your current working directory, which should be similar to `course00/home/`, type the following command:
+>
+> ~~~
+> git clone https://github.com/ICHEC-learn/intro-to-hpc.git 
+> ~~~
+> {: .language-bash}
+> 
+> This will clone the lesson's repository into your current directory, and you have access to all the lecture material
+> including slides, exercises and markdown files. You can download this material later when we use the `scp` command.
+>
+{: .challenge}
 
 ## A review of the Linux commands
 
