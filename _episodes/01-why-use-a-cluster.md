@@ -174,6 +174,4 @@ justification of the resources requested.
 | Proposal      | 6-10 pages.                         |
 | Applicants    | Group Leader/Professor/Lecturer/    |
 
-
-
 {% include links.md %}
