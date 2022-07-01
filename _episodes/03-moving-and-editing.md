@@ -231,6 +231,8 @@ Therefore, we need to take note of the path to our file on the remote host, `~/f
 to open a terminal on our local machine and utilise a new command, `scp`, which stands for *secure copy*. From there, 
 it operates in a very similar way to the `cp` command.
 
+<p align="center"><img src="../fig/scp-to-laptop.jpg" width="60%"/></p>
+
 On your local machine, the syntax is as follows;
 
 ~~~
@@ -257,6 +259,8 @@ recursive flag (`-r`) as shown below.
 $ scp -r johnsmith@satellite.world:~/files .
 ~~~
 {: .language-bash}
+
+<p align="center"><img src="../fig/scp-to-host.jpg" width="60%"/></p>
 
 If you want to get something from your local machine onto a remote host, then the command will naturally be a bit
 different, as the file to be transferred needs to go first, followed by the directory to put it into on the remote host.
