@@ -193,7 +193,7 @@ Probably the most commonly used command, used to change directories.
 | `cd` or `cd ~` | Move to home directory     |
 |     `cd -`     | Move to previous directory |
 
-#### `mkdir` and `rmdir`
+#### `mkdir` and `rmdir` - make directory and remove directory
 
 The command `mkdir` creates a new empty directory, and `rmdir` can remove an empty directory.
 
@@ -203,7 +203,7 @@ $ rmdir new_directory
 ~~~
 {: .language-bash}
 
-#### `mv` and `cp`
+#### `mv` and `cp` - move and copy
 
 Move `mv` and copy `cp` work in very similar ways, where two inputs are needed, first the file that you are 
 copying/moving and second the location you are moving/copying to. The `mv` command has a secondary use to 
@@ -216,7 +216,7 @@ $ cp file1 mydir
 ~~~
 {: .language-bash}
 
-#### `rm` 
+#### `rm` - remove
 
 The remove command `rm` is a particularly dangerous command, as the shell deletes files instantly, bypassing the regular
 recycle bin.
@@ -234,7 +234,7 @@ $ rm myfile.txt
 ~~~
 {: .language-bash}
 
-#### `man` and `--help`
+#### `man` and `--help`- manual and help
 
 The manual, `man` command displays a user manual of any command, including the different flag options associated with
 that command.
@@ -246,7 +246,7 @@ $ man ls
 
 The `--help` command serves a similar purpose to `man`, with a different implementation.
 
-#### `history`
+#### `history` - last commands typed
 
 History is a helpful command which by default shows the last 1000 commands used. It can sometimes be helpful to pipe it
 to `less` using `|`.
@@ -256,7 +256,7 @@ $ history
 ~~~
 {: .language-bash}
 
-#### `grep`
+#### `grep` - search
 
 The search command, grep stands for **globally search for a regular expression**, and is one of the more powerful
 commands in UNIX, particularly when used with pipes.
@@ -266,7 +266,7 @@ grep 'expression' file.txt
 ~~~
 {: .language-bash}
 
-#### `vim` and `nano`
+#### `vim` and `nano` - text editors
 
 The programs `vim` and `nano` are text editors that can be used on most HPC clusters. We will work with these more in
 upcoming episodes. We would recommend using `vim` as it has plentiful useful shortcuts and is very versatile. It can be
