@@ -96,6 +96,8 @@ These can be thought of as the action of submission scripts and compute nodes. T
 warehouse of the store, all the important things are stored there and is where all the major work is done. On a HPC, the
 compute nodes are the place that your code is run.
 
+<p align="center"><img src="../fig/nodes.png" width="80%"/></p>
+
 The **submission scripts**, i.e. the list of orders in our shop, is sent to the compute node to undertake a task, where
 all the work is done behind the scenes. There are ways to access the compute nodes directly, but that is beyond the
 scope of this course
