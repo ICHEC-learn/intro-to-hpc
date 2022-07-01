@@ -69,6 +69,9 @@ machines perform a virtual handshake.
 >
 {: .callout}
 
+<p align="center"><img src="../fig/ssh-key-connect.png" width="60%"/></p>
+
+
 > ## Logging into Kay (15 minutes)
 >
 > You will have been sent a link to submit your ssh keys in the last few days, if you have not submitted your ssh key
