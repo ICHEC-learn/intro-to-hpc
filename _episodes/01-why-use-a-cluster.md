@@ -59,7 +59,7 @@ The best way to answer this is with an example.
 > {: .solution}
 {: .challenge}
 
-Although the techniques and exact methodologoes of speedup like this is beyond the scope of this course, hopefully you
+Although the techniques and exact methodologies of speedup like this is beyond the scope of this course, hopefully you
 now realise and can imagine the types of things that a supercomputer can make possible through either the implementation
 of high performance code or high quantities of cores.
 
