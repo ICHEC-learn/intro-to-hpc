@@ -23,6 +23,8 @@ Job scripts are a form of bash script, but one which is managed with the Slurm W
 short. It is a free and open source job scheduler for Linux and UNIX-like kernels and is used by many of the world's
 largest supercomputers and clusters.
 
+<p align="center"><img src="../fig/slurm-manager.png" width="70%"/></p>
+
 Why is it needed you may ask? Think of it like a waiter at a restaurant, dealing with different clients, each coming in
 and sending different orders to the kitchen. They are there to ensure that the kitchen doesn't get overrun with orders 
 and so they can effectively plan a service. In the same way that you may have 100 customers and only 5 chefs and 10
@@ -33,8 +35,10 @@ and submit it to a queue to run, a number of things happen.
 
 1. The user submits the job to Slurm win a job file, which can be a `.sh`, `.job` extension
 2. Slurm sends the job to the software to execute
-3. The software does the job over an "X" period of time.
-4. Slurm sends information back to the user in therms of slurm output (`slurm.log`) and software output (`output.log`).
+3. The software does the job over an "X" period of time
+4. Slurm sends information back to the user in therms of slurm output (`slurm.log`) and software output (`output.log`)
+
+<p align="center"><img src="../fig/slurm-workflow.png" width="70%"/></p>
 
 A typical job script looks something like the code block below, which has been simplified to show the slurm notation.
 
