@@ -42,7 +42,7 @@ The best way to answer this is with an example.
 > box for 8 hours, be it a molecular interaction, climate, weather as an example, how long will
 > it take to run if we only use one CPU core?
 >
-> <p align="center"><img src="../fig/01/10x10x10_cube.png" width="40%"/></p>
+> <p align="center"><img src="../fig/10x10x10_cube.png" width="40%"/></p>
 >
 > {: language-bash}
 >

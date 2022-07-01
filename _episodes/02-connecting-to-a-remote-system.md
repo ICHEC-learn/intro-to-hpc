@@ -18,7 +18,7 @@ keypoints:
 
 <p align="center"><img src="../fig/ICHEC_Logo.jpg" width="40%"/></p>
 
-## ssh keys
+## SSH keys
 
 If you have taken our Introduction to Linux course, you will already be familiar with SSH keys through the 
 [SSH key episode](https://ichec-learn.github.io/intro-to-linux/07-ssh/index.html). If you have not, then here is a 
@@ -31,17 +31,15 @@ or clusters require the use of an SSH key to gain access
 When you set up an SSH key, you generate a “key-pair”, a public and private key. These will be stored in your home
 directory.
 
-See here for a recap
-
-https://www.ichec.ie/academic/national-hpc/documentation/tutorials/setting-ssh-keys
+See [here](https://www.ichec.ie/academic/national-hpc/documentation/tutorials/setting-ssh-keys) for a recap
 
 > ## For Windows MobaXterm users
 >
 > MobaXterm will not automatically generate a public key in the correct directory, you will need to do 2 steps to get
 > your public key working effectively.
 >
-> 1. In Settings Tab --> Terminal Tab --> Terminal features Box, ensure that the “Paste using right-click” box is left 
->    un-ticked.
+> 1. In Settings Tab --> Terminal Tab --> Terminal features Box, ensure that the **Paste using right-click** box is
+>    left un-ticked.
 > 2. In Settings Tab --> General Tab --> Persistent home directory Box Enter `_ProfileDir_`  into the box, otherwise 
 >    your public ssh key will be denied by ICHEC systems.
 >
@@ -57,9 +55,11 @@ anyone. These are used to decrypt messages that were created with the correspond
 In other words, a public key locks up data from unauthorised use, while a private key is used to unlock it. The
 machines perform a virtual handshake.
 
+<p align="center"><img src="../fig/ssh-key.png" width="60%"/></p>
+
 > ## A note on private keys
 >
-> Private keys are your private identity
+> Private keys are your private identity on an HPC system.
 > 
 > A private key that is visible to anyone but you should be considered compromised, and must be destroyed. This includes 
 > having improper permissions on the directory it (or a copy) is stored in, traversing any network in the clear,
